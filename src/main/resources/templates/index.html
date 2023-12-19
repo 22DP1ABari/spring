@@ -12,6 +12,8 @@
     </style>
 </head>
 <body>
-    <h1>Welcome!</h1>
+    <h3>About lapa</h3>
+    <h3 th:text="'Sveiks, tevi sauc - + ${param.name}'"></h3>
+    <p th:text="'Tavs vecums ir: ' + ${param.age}"></p>
 </body>
 </html>
