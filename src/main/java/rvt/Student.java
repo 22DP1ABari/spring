@@ -1,16 +1,27 @@
 package rvt;
 
-public class Student {
-    public String name;
-    public String surname;
-    public String email;
-    public String group;
+public class Student extends Person {
+    private int credits;
 
-
-    public Student(String name, String surname, String email, String group) {
-        this.name = name;
-        this.surname = surname;
-        this.email = email;
-        this.group = group;
+    public Student(String name, String address) {
+        super(name, address);
+        this.credits = 0;
     }
+
+    public void study() {
+        credits = credits + 1;
+    }
+
+    public int credits() {
+        return credits;
+    }
+
+    public String toString() {
+        return super.getName() + " " + super.getAddress() + " " + " Study credits " + this.credits();
+    }
+
+
+
+
 }
+
